@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+  }
+  html{
+    width: 100%;
+    height: 100%;
+  }
+  
+  body {
+    background-image: url(../Imagenes/FondoNormal.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  img {
+    width: 300px;
+    height: 200px;
+  }
+  .navbar {
+    background-color: #e9e91e;
+    overflow: hidden;
+    font-size: 1.4em;
+    top: 0;
+    width: 100%;
+    display:grid;
+    align-items: center;
+  }
+  .navbar-left a {
+    float: left;
+    display: block;
+    color: #030000;
+    text-align: center;
+    padding: 1.26em ;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 1em;
+    color: white;
+    width: 30em;
+    height: 1.6em;
+    font-style: italic;
+    border-radius: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer{
+    background-color: #030000;
+    color: white;
+    text-decoration: none;
+    padding: 1.2em 2.6em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .navbar-right a{
+    float: right;
+    display: block;
+    color: #030000;
+    text-align: center;
+    padding: 1.34em;
+    font-weight: bolder;
+    text-decoration: none;
+    justify-content: center;
+    width: 1em;
+    display: flex;
+    justify-items: center;
+  }
+  .navbar-left .toggle_btn{
+    color: white;
+    font-size: 0.1em;
+    cursor: pointer;
+    display: none;
+  }
+  .menu{
+    position: absolute;
+    left: 2em;
+    height: 0;
+    top: 3.75em;
+    width: 18.75;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .menu li{
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .menu .open{
+    height: 240px;
+  }
+  iframe{
+    padding-left: 10em;
+    padding-top: 2em;
+    width: 45em;
+    height: 25em;
+  }
+  .container{
+    width: 100%;
+  }
+  .container img{
+    float: right;
+  }
+  img{
+    width: 30em;
+    height: 30em;
+  }
+  .boxes {
+    display: flex;
+    color: white;
+  }
+  
+  table {
+    font-size: 1.2em;
+    margin-top: 2em;
+    margin-right: 3em;
+    margin-left: 5em;
+    margin-bottom: 4em;
+    background-color: red;
+    width: 20em;
+    border-radius: 0.5em;
+  }
+
+  .boxes a{
+    font-size: 2em;
+    color: black;
+  }
+  @media(max-width: 982px){
+    .navbar {
+      height: 13em;
+    }
+    h1{
+      font-size: 2em;
+    height: 2em;
+    margin-right: 1em;
+    }
+    table{
+      font-size: 1.5em;
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-top: 15em;
+    } 
+    img{
+      width: 20em;
+      height: auto;
+    }
+    iframe{
+      margin-left: 4em;
+      margin-top: 2em;
+    }
+    body {
+      background-image: url(../Imagenes/Fondo4.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+    }
+    footer{
+      height: 6em;
+      font-size: 1.7em;
+      text-align: center;
+      position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    .navbar-right{
+      font-size: 3em;
+    }
+    .navbar-left{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 5em;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    .navbar .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #e9e91e;
+      padding: 1em;
+    }
+  
+    .navbar .menu li {
+      margin-right: 0;
+      margin-bottom: 0.5em;
+    }
+  
+    .navbar .menu li:last-child {
+      margin-bottom: 0;
+    }
+  
+    .navbar-toggle.active + .menu {
+      display: flex;
+    }
+  }
