@@ -93,9 +93,13 @@ input[type="submit"]:hover {
 }
 footer{
   background-color: #030000;
-  color: white;
-  text-decoration: none;
-  padding: 1.2em 2.6em;
+    color: white;
+    text-decoration: none;
+    padding: 1.2em 2.6em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 .container{
   height: 100%;
