@@ -105,7 +105,30 @@ footer{
   height: 100%;
   width: 100%;
   justify-content: center;
+  background-image: linear-gradient(#37214d, #000);
+  position: fixed;
 }
+.space{
+  --size: 0.1em;
+  --space-layer:
+  4vw 50vh 0 #fff,
+  18vw 88vh 0 #fff;
+
+  width: var(--size);
+  height: var(--size);
+  background: white;
+  box-shadow: var(--space-layer);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 75%;
+  animation: moveStars var(--duration, 20s) linear infinite;
+}
+@keyframes moveStars{
+  from{transform: translateY(0); }
+  to{transform: translateY(-100vh); }
+}
+
 .user {
   align-content: center;
 }

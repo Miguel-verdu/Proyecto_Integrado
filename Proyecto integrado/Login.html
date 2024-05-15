@@ -30,6 +30,9 @@
         </nav>
     </div>
     <div class="container">
+        <div class="space space-1"></div>
+        <div class="space space-2"></div>
+        <div class="space space-3"></div> 
         <form>
             <div class="user">
                 <i class='bx bxs-user-circle'></i>
@@ -46,9 +49,30 @@
                 <div class="boton">
                     <input type="submit" value="Iniciar sesión">
                 </div>
-            </div>
+            </div>           
         </form>
     </div>
+    <script>
+        const COLORS = ["#fff2", "#fff4", "#fff7", "#fffc"]
+
+        generateSpaceLayer = (size, selector, totalStars, duration) => {
+            const layer = [];
+            for (let i = 0; i < totalStars; i++){
+                const x = Math.floor(Math.random() * 100);
+                const y = Math.floor(Math.random() * 100);
+                layer.push(`${x}vw ${y}vh 0 white, ${x}vw ${y+100}vh 0 white`)
+            }
+            const container = document.querySelector(".space-1");
+            container.style.setProperty("--space-layer", layer.join(","));
+            container.style.setProperty("--size", size);
+            container.style.setProperty("--duration", duration);
+
+        }
+        generateSpaceLayer("0.1em", ".space-1", 300, "25s");
+        generateSpaceLayer("0.15em", ".space-2", 100, "20s");
+        generateSpaceLayer("0.4em", ".space-3", 25, "15s");
+
+    </script>
     <footer>
             <a href="#">Política de privadidad ©</a>
     </footer>

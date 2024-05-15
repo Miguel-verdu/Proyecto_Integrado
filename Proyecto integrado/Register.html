@@ -4,6 +4,8 @@
     <title>Login Screen with Navbar</title>
     <link rel="stylesheet" href="css/Register.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript" src="Register.js"></script>
+
 </head>
 <body>
     <div class="navbar">
@@ -38,14 +40,42 @@
                 <h1>Regístrate</h1>
                 <label for="username">Nombre de usuario:</label>
                 <input type="text" id="username" name="username">
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password">
+                <label>Contraseña:</label>
+                <input type="text" id="password" name="Password">
+                <div class="boton2" onclick="createPassword()">
+                    <input type="submit" value="Generar contraseña">
+                </div>
                 <div class="boton">
                     <input type="submit" value="Iniciar sesión">
                 </div>
             </div>
         </form>
     </div>
+
+    <script>
+        const upperCase = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+        const lowerCase = "abcdefghijklmnñopqrstuvwxyz";
+        const numbers = "0123456789";
+        const symbols = "*@#$%&*!()[]{};:<>?/|+-"
+        const allChars = upperCase + lowerCase + numbers + symbols;
+        const length = 12;
+        const passwordBox = document.getElementById("password");
+
+        function createPassword(){
+            let password = "";
+            password += upperCase[Math.floor(Math.random() * upperCase.length)];
+            password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+            password += numbers[Math.floor(Math.random() * numbers.length)];
+            password += symbols[Math.floor(Math.random() * symbols.length)];
+
+            while (length > password.length){
+                password += allChars[Math.floor(Math.random() * allChars.length)];
+            }
+            passwordBox.value = password;
+        }
+
+    </script>
+
     <footer>
             <a href="#">Política de privadidad ©</a>
     </footer>

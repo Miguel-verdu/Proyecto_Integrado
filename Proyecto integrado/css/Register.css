@@ -81,6 +81,9 @@
   input[type="submit"]:hover {
     background-color: #a04545;
   }
+  .boton{
+   text-align: end;
+  }
   .container i {
     font-size: 15em;
     align-self: flex-start;
